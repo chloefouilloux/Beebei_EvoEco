@@ -8,7 +8,9 @@ In the **2023_EvoEco_Beebei.Rmd** you will find the annotated code for all of th
 In the **Beebei_PoolData2023.csv** is the cleaned data .csv ready for rock and roll. 
 The variable descriptions are as follows:
 >> **Bromeliad** Individual entire plant ID
+>> 
 >> **Pool_ID** Individual ID for plant pool
+>> 
 >> **Distance** Distance in meters to nearest reference flag.
 >> **Bearing** Orientation in direction to the nearest reference flag.
 >> **Ref_Flag_x/y** Reference flags for grid established in the field site in Kaiteur Falls, Guyana.
