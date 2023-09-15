@@ -63,12 +63,15 @@ descrip_stats_YN <- goop %>%
                 group_by(YNTad)%>%
                 dplyr::select(Temp, DO, Depth, Width, Volume, logPAR, 
                               Goop_Count)%>%
-                dplyr::summarise(mean(Temp),sd(Temp), mean(DO), sd(DO),
-                                 mean(Goop_Count),sd(Goop_Count),
-                                mean(Width), sd(Width),
-                                mean(Volume), sd(Volume),
-                                mean(Depth), sd(Depth), mean(logPAR), 
-                                sd(logPAR)) 
+                dplyr::summarise(mean(Temp),sd(Temp), min(Temp), max(Temp), 
+                                 mean(DO), sd(DO), min(DO), max(DO),
+                              mean(Goop_Count),sd(Goop_Count),
+                               min(Goop_Count), max(Goop_Count),
+                                mean(Width), sd(Width),min(Width), max(Width),
+                              mean(Volume), sd(Volume), min(Volume), max(Volume),
+                                mean(Depth), sd(Depth), min(Depth), max(Depth),
+                              mean(logPAR),sd(logPAR), min(logPAR), max(logPAR),
+                                n = n()) 
 ```
 
 Alright, let's get to some modelling!
