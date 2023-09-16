@@ -44,7 +44,10 @@ The variable descriptions are as follows:
 >> **Detritus** Cat. factor assessing detritus in pools
 >> 
 >> **Water** Cat. factor assessing turbidity of pools (Clear vs. Turbid)
+>> 
 >> **Depth** Pool depth in cm
+>> 
 >> **Width** Pool width in cm
+>> 
 >> **Volume** Volume contained by pool measured in mL
 
