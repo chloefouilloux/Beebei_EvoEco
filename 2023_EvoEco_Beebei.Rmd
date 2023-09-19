@@ -26,7 +26,7 @@ library(gridExtra)
 library(AICcmodavg)
 ```
 
-Great, now let's load up out **data file**. 
+Great, now let's load up our **data file**. 
 
 ```{r Data Load + Wrangling}
 
@@ -45,6 +45,7 @@ goop$Goop_Cat <- forcats::fct_relevel(goop$Goop_Cat,"None", "Low", "Medium", "Hi
 ```
 
 Let's look a bit at what's up here.
+
 ```{r Theme Set}
 theme_set(  theme(legend.position = "none",
                   strip.background = element_rect(fill = "White"),
@@ -148,12 +149,13 @@ tab_model(m1b,
 
 ######## ######## ######## ######## ######## ######## ######## ######## 
 ######## **There are more tadpoles in goopy pools, but what do these pools look like?** ########
-######## Goop Modelling: What do goopy pools look like? ################
+######## Goop Modelling: What do high mucilage pools look like? ################
 ######## ######## ######## ######## ######## ######## ########
 
 m2a<- glmmTMB(Goop_Count ~ Water + DO + Temp + logPAR + Depth+ Volume + L_H + (1|Bromeliad), data = goop, family = poisson)
 
 #RE: Error message. This warning occurs when the optimizer visits a region of parameter space that is invalid. It is not a problem as long as the optimizer has left that region of parameter space upon convergence, which is indicated by an absence of the model convergence warnings described above.
+
 step(m2a)
 
 ######################
@@ -175,8 +177,6 @@ Cand.names <- c(
          "m2d", 
          "m2e") 
 aictab(aic.cand, Cand.names, sort = T)
-
-
 #Model with the lowest AIC that also passes DHARMa checks were chosen. The significant variables from the final model were identical to the core model. 
 
 #RUN TWO LINES TOGETHER
@@ -205,7 +205,7 @@ tab_model(m2d,
 
 ```
 
-Get your plot on gurl!
+Plotting for Figures 2a/b and 3a/b of the paper.
 
 ```{r Plotting FIGS 2 + 3}
 ## **DO ~ Goop** ##
