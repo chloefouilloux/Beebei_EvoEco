@@ -5,7 +5,10 @@ date: '2023-04-19'
 output: html_document
 ---
 
-I am here for the journey! It is very exciting to be revising these data with a big more statistical prowess in my pocket. Let's see what this whole dataset it all about. 
+Hello! Thank you for your interest in Fouilloux et al. 2023, ""Home is where the high-quality resources are: nursery characteristics and territory distribution suggest reproductive resource defense in golden rocket frogs".
+
+Below are the data and visualization for the tadpole occurence and phytotelm conditions. Please see the **.readme** file for variable units and descriptions. 
+NOTE: Here the level of mucilage in pools is referred to as "goop" as a coding shorthand.
 
 ```{r Libraries}
 
